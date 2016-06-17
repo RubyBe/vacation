@@ -1,3 +1,4 @@
+// Declare global variables
 var temp;
 var land;
 var lodge;
@@ -8,7 +9,8 @@ var suggest2;
 var suggest3;
 
 $(document).ready(function(){
-  $("button#preferences").click(function(event){
+  $("#preferences").click(function(event){
+    // Store user input in our global variables
     temp = $("#temperature").val();
     land = $("input:radio[name=landscape]:checked").val();
     lodge = $("#lodging").val();
@@ -19,8 +21,8 @@ $(document).ready(function(){
     // If things aren't that important, they should possibly stay near by
     if (temp==="ignore" && land==="ignore" && lodge==="ignore") {
       suggest1 = "Maybe stay home?"
-      suggest2 = "Or with your neighbors next door?"
-      suggest3 = "Or at a hotel nearby?"
+      suggest2 = "Your neighbors next door?"
+      suggest3 = "A nearby hotel?"
     }
     // Set hot temperature preferences
     if (temp==="hot" && land==="water") {
@@ -74,10 +76,20 @@ $(document).ready(function(){
     }
 
     // Build display list
-    $("ul#suggestions").prepend("<li>" + suggest1 + "</li>");
-    $("ul#suggestions").prepend("<li>" + suggest2 + "</li>");
-    $("ul#suggestions").prepend("<li>" + suggest3 + "</li>");
+      $("ul#suggestions").append("<li>" + suggest1 + "</li>");
+      $("ul#suggestions").append("<li>" + suggest2 + "</li>");
+      $("ul#suggestions").append("<li>" + suggest3 + "</li>");
+
+
+    // Display suggestions
+    $(".displaySuggestions").show();
+    $("#clearSuggestions").show();
   })
 
+  $("#clearSuggestions").click(function(event){
+    // Click out the suggestion list
+    $("li").remove();
+    $(this).hide();
+  })
 
 })
