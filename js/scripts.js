@@ -7,6 +7,9 @@ var month;
 var suggest1;
 var suggest2;
 var suggest3;
+var image1;
+var image2;
+var image3;
 
 $(document).ready(function(){
   $("#preferences").click(function(event){
@@ -75,10 +78,15 @@ $(document).ready(function(){
       suggest3 = "Seattle, Washington (that's right, Seattle has it all!)"
     }
 
+    // set thumbnail images
+    // TODO 
+
     // Build display list
       $("ul#suggestions").append("<li>" + suggest1 + "</li>");
       $("ul#suggestions").append("<li>" + suggest2 + "</li>");
       $("ul#suggestions").append("<li>" + suggest3 + "</li>");
+
+      $('#imagelink').val(image1);
 
 
     // Display suggestions
@@ -86,10 +94,12 @@ $(document).ready(function(){
     $("#clearSuggestions").show();
   })
 
-  // Clear out the suggestion list and the 'clear' button on re-submit
+  // Clear out the suggestion list, hide the contents of the jumbotron
   $("#clearSuggestions").click(function(event){
     $("li").remove();
-    $(this).hide();
+    // $("#displayText").hide();
+    // $(this).hide();
+    $(".displaySuggestions").hide();
   })
 
 })

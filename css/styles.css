@@ -1,3 +1,41 @@
-.displaySuggestions{
+/*General text*/
+h3 {
+  color: rgba(138,151,145,.7);
+}
+
+.submitButton {
+  height: 50px;
+  align:  center;
+}
+
+/*Preference assessments*/
+.assessTemp {
+  height: 200px;
+  background-image: url(https://openclipart.org/image/2400px/svg_to_png/202373/Raseone-Weather.png);
+}
+
+.assessLand {
+  height: 200px;
+  background-image: url(https://openclipart.org/image/2400px/svg_to_png/202373/Raseone-Weather.png);
+}
+
+.assessLodge {
+  height: 200px;
+  background-image: url(https://openclipart.org/image/2400px/svg_to_png/202373/Raseone-Weather.png)
+}
+
+.assessColor {
+  height: 200px;
+  background-image: url(https://openclipart.org/image/2400px/svg_to_png/202373/Raseone-Weather.png)
+}
+
+.assessDate {
+  height: 200px;
+  background-image: url(https://openclipart.org/image/2400px/svg_to_png/202373/Raseone-Weather.png)
+}
+
+/*Suggestion display jumbotron*/
+
+.displaySuggestions {
   display: none;
 }
