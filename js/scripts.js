@@ -81,14 +81,17 @@ $(document).ready(function(){
     // set thumbnail images
     // TODO
 
-    // Build display list
-      $("ul#suggestions").append("<li>" + suggest1 + "</li>");
-      $("ul#suggestions").append("<li>" + suggest2 + "</li>");
-      $("ul#suggestions").append("<li>" + suggest3 + "</li>");
+    // Build display
+    $("ul#suggestions").append("<li>" + suggest1 + "</li>");
+    $("ul#suggestions").append("<li>" + suggest2 + "</li>");
+    $("ul#suggestions").append("<li>" + suggest3 + "</li>");
 
-    // Display suggestions
+    // Display suggestions list and images
     $(".displaySuggestions").show();
     $("#clearSuggestions").show();
+    $("#image1").show();
+    $("#image2").show();
+    $("#image3").show();
   })
 
   // Clear out the suggestion list, hide the contents of the jumbotron

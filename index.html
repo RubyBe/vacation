@@ -18,12 +18,12 @@
       <div class="center jumbotron">
         <h1>The Vacation Picker</h1>
         <h3>We'll identify the perfect vacation spot for you!</h3>
-        <p>First, set your preferences to each of the items below.</p>
+        <h3>First, set your preferences to each of the items below.</h3>
       </div>
 
       <form class="assess">
         <div class="assessTemp">
-          <h3>Temperature preferences:</h3>
+          <h2>Temperature preferences:</h2>
           <select class="form-control" id="temperature">
             <option value="ignore">Not important</option>
             <option value="hot">Needs to be very hot</option>
@@ -33,7 +33,7 @@
         </div>
 
         <div class="assessLand">
-          <h3>Landscape preferences:</h3>
+          <h2>Landscape preferences:</h2>
             <div class="radio"><label><input type="radio" name="landscape" value="ignore" checked>Not important</label></div>
             <div class="radio"><label><input type="radio" name="landscape" value="water">Need to see water</label></div>
             <div class="radio"><label><input type="radio" name="landscape" value="mountains">Need to see mountains</label></div>
@@ -42,7 +42,7 @@
         </div>
 
         <div class="assessLodge">
-          <h3>Lodging preferences:</h3>
+          <h2>Lodging preferences:</h2>
           <select class="form-control" id="lodging">
             <option value="ignore">Not important</option>
             <option value="luxury">Needs to be a luxury hotel</option>
@@ -50,22 +50,6 @@
             <option value="bandb">A B&B is best to get to know the locals</option>
             <option value="tent">A tent works</option>
           </select>
-        </div>
-
-        <div class="assessColor">
-          <h3>What color relaxes you the most?</h3>
-          <div class="form-group">
-            <label for="color">Pick the most relaxing color</label>
-            <input id="color" class="form-control" type="color">
-          </div>
-        </div>
-
-        <div class="">
-          <h3>What are your preferred dates?</h3>
-          <div class="form-group">
-            <label for="departure">Date you plan to depart:</label>
-            <input id="departure" class="form-control" type="date">
-          </div>
         </div>
 
         <button type="button" class="btn btn-lg" name="sendPreferences" id="preferences">Click to submit and get your destination suggestions</button>
@@ -101,8 +85,25 @@
         </div>
       </div>
 
+      <div class="container morePreferences">
+        <h2>A couple of more items to help determine the best time of year for each location.</h2>
+        <div class="assessColor">
+          <h2>What color relaxes you the most?</h2>
+          <div class="form-group">
+            <label for="color">Pick the most relaxing color</label>
+            <input id="color" class="form-control" type="color">
+          </div>
+        </div>
+
+        <div class="">
+          <h2>What are your preferred dates?</h2>
+          <div class="form-group">
+            <label for="departure">Date you plan to depart:</label>
+            <input id="departure" class="form-control" type="date">
+          </div>
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
-Status API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Contact Help

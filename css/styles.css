@@ -1,14 +1,11 @@
 /*General text*/
-h3 {
-  color: rgba(138,151,145,.7);
+h2 {
+  color: rgba(138,151,145,1);
 }
 
 .jumbotron {
-  /*background-image:url(img/main-bg.png);*/
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
-  /*padding: 100px 0 70px 0;*/
-  margin-bottom: 25px;
+  background-color: rgba(69, 170, 153, 0.5);
+  margin-top: 50px;
 }
 
 /*Preference assessments*/
@@ -18,27 +15,43 @@ h3 {
 }
 
 .assessLand {
+  margin-top: 50px;
   height: 200px;
-  background-image: url(https://openclipart.org/image/2400px/svg_to_png/202373/Raseone-Weather.png);
+  background-image: url(http://tse2.mm.bing.net/th?id=OIP.M873aec80407a3bcc23373d36a82e67fao0&pid=15.1);
 }
 
 .assessLodge {
+  margin-top: 50px;
   height: 200px;
-  background-image: url(https://openclipart.org/image/2400px/svg_to_png/202373/Raseone-Weather.png)
+  background-image: url(http://icons.iconarchive.com/icons/dapino/summer-holiday/256/hotel-icon.png)
 }
 
 .assessColor {
-  height: 200px;
-  background-image: url(https://openclipart.org/image/2400px/svg_to_png/202373/Raseone-Weather.png)
+  margin-top: 50px;
+  height: 100px;
 }
 
 .assessDate {
-  height: 200px;
+  height: 100px;
   background-image: url(https://openclipart.org/image/2400px/svg_to_png/202373/Raseone-Weather.png)
 }
 
-/*Suggestion display jumbotron*/
+.morePreferences {
+  margin-top: 50px;
+}
+
+/*Setup for special effects*/
 
 .displaySuggestions {
   display: none;
+}
+
+.displayDest {
+  display: none;
+}
+
+/*buttons*/
+#preferences {
+  margin-top: 100px;
+  text-align: center;
 }
