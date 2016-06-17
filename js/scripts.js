@@ -86,8 +86,8 @@ $(document).ready(function(){
     $("#clearSuggestions").show();
   })
 
+  // Clear out the suggestion list and the 'clear' button on re-submit
   $("#clearSuggestions").click(function(event){
-    // Click out the suggestion list
     $("li").remove();
     $(this).hide();
   })
