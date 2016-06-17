@@ -1,2 +1,2 @@
 var testhello = "hello";
-alert(testhello);
+// alert(testhello);

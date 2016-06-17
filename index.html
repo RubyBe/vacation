@@ -13,6 +13,48 @@
 
   </head>
   <body>
+    <div class="container">
+      <h1>Let's identify the perfect vacation spot for you!</h1>
+      <h2>First, set your preferences to each of the items below.</h2>
 
+      <form class="assess">
+        <h3>Temperature preferences:</h3>
+        <select class="form-control" name="temperature">
+          <option value="ignore">Not important</option>
+          <option value="hot">Needs to be very hot</option>
+          <option value="temperate">Needs to be temperate</option>
+          <option value="cold">Needs to be very cold</option>
+        </select>
+
+      <h3>Landscape preferences:</h3>
+        <div class="radio"><label><input type="radio" name="landscape" value="ignore" checked>Not important</label></div>
+        <div class="radio"><label><input type="radio" name="landscape" value="water">Need to see water</label></div>
+        <div class="radio"><label><input type="radio" name="landscape" value="mountains">Need to see mountains</label></div>
+        <div class="radio"><label><input type="radio" name="landscape" value="bluesky">Need to see open blue sky</label></div>
+        <div class="radio"><label><input type="radio" name="landscape" value="urban">Need to see urban landscapes</label></div>
+
+      <h3>Lodging preferences:</h3>
+      <select class="form-control" name="lodging">
+        <option value="ignore">Not important</option>
+        <option value="luxury">Needs to be a luxury hotel</option>
+        <option value="motel">Utilitarian is fine, but clean is necessary</option>
+        <option value="bandb">A B&B is best to get to know the locals</option>
+        <option value="tent">A tent works</option>
+      </select>
+
+      <h3>What color relaxes you the most?</h3>
+      <div class="form-group">
+        <label for="color">Pick the most relaxing color</label>
+        <input id="color" class="form-control" type="color">
+      </div>
+
+      <h3>What are your preferred dates?</h3>
+        <div class="form-group">
+          <label for="departure">Date you plan to depart:</label>
+          <input id="departure" class="form-control" type="date">
+        </div>
+      </form>
+
+    </div>
   </body>
 </html>
