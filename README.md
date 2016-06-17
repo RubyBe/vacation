@@ -4,7 +4,7 @@ Assesses certain preferences and suggests a vacation destination for you.
 
 ## Getting Started
 
-Click "" to see view the html version of this project.
+[Click](https://rubybe.github.io/vacation/) to see view the html version of this project.
 
 ### Prerequisities
 
