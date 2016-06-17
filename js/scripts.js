@@ -79,15 +79,12 @@ $(document).ready(function(){
     }
 
     // set thumbnail images
-    // TODO 
+    // TODO
 
     // Build display list
       $("ul#suggestions").append("<li>" + suggest1 + "</li>");
       $("ul#suggestions").append("<li>" + suggest2 + "</li>");
       $("ul#suggestions").append("<li>" + suggest3 + "</li>");
-
-      $('#imagelink').val(image1);
-
 
     // Display suggestions
     $(".displaySuggestions").show();

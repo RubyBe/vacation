@@ -15,69 +15,62 @@
   </head>
   <body>
     <div class="container bodyFull">
-      <div class = "jumbotron">
-        <h1>Let's identify the perfect vacation spot for you!</h1>
-        <p>First, set your preferences to each of the items below.</p>
-      </div>
+      <h1>Let's identify the perfect vacation spot for you!</h1>
+      <h2>First, set your preferences to each of the items below.</h2>
 
-      <div class ="container Form">
-        <form class="assess">
-          <div class="container assessTemp">
-            <h3>Temperature preferences:</h3>
-            <select class="form-control" id="temperature">
-              <option value="ignore">Not important</option>
-              <option value="hot">Needs to be very hot</option>
-              <option value="temperate">Needs to be temperate</option>
-              <option value="cold">Needs to be very cold</option>
-            </select>
+      <form class="assess">
+        <div class="assessTemp">
+          <h3>Temperature preferences:</h3>
+          <select class="form-control" id="temperature">
+            <option value="ignore">Not important</option>
+            <option value="hot">Needs to be very hot</option>
+            <option value="temperate">Needs to be temperate</option>
+            <option value="cold">Needs to be very cold</option>
+          </select>
+        </div>
+
+        <div class="assessLand">
+          <h3>Landscape preferences:</h3>
+            <div class="radio"><label><input type="radio" name="landscape" value="ignore" checked>Not important</label></div>
+            <div class="radio"><label><input type="radio" name="landscape" value="water">Need to see water</label></div>
+            <div class="radio"><label><input type="radio" name="landscape" value="mountains">Need to see mountains</label></div>
+            <div class="radio"><label><input type="radio" name="landscape" value="bluesky">Need to see open blue sky</label></div>
+            <div class="radio"><label><input type="radio" name="landscape" value="urban">Need to see urban landscapes</label></div>
+        </div>
+
+        <div class="assessLodge">
+          <h3>Lodging preferences:</h3>
+          <select class="form-control" id="lodging">
+            <option value="ignore">Not important</option>
+            <option value="luxury">Needs to be a luxury hotel</option>
+            <option value="motel">Utilitarian is fine, but clean is necessary</option>
+            <option value="bandb">A B&B is best to get to know the locals</option>
+            <option value="tent">A tent works</option>
+          </select>
+        </div>
+
+        <div class="assessColor">
+          <h3>What color relaxes you the most?</h3>
+          <div class="form-group">
+            <label for="color">Pick the most relaxing color</label>
+            <input id="color" class="form-control" type="color">
           </div>
+        </div>
 
-          <div class="container assessLand">
-            <h3>Landscape preferences:</h3>
-              <div class="radio"><label><input type="radio" name="landscape" value="ignore" checked>Not important</label></div>
-              <div class="radio"><label><input type="radio" name="landscape" value="water">Need to see water</label></div>
-              <div class="radio"><label><input type="radio" name="landscape" value="mountains">Need to see mountains</label></div>
-              <div class="radio"><label><input type="radio" name="landscape" value="bluesky">Need to see open blue sky</label></div>
-              <div class="radio"><label><input type="radio" name="landscape" value="urban">Need to see urban landscapes</label></div>
+        <div class="">
+          <h3>What are your preferred dates?</h3>
+          <div class="form-group">
+            <label for="departure">Date you plan to depart:</label>
+            <input id="departure" class="form-control" type="date">
           </div>
+        </div>
 
-          <div class="container assessLodge">
-            <h3>Lodging preferences:</h3>
-            <select class="form-control" id="lodging">
-              <option value="ignore">Not important</option>
-              <option value="luxury">Needs to be a luxury hotel</option>
-              <option value="motel">Utilitarian is fine, but clean is necessary</option>
-              <option value="bandb">A B&B is best to get to know the locals</option>
-              <option value="tent">A tent works</option>
-            </select>
-          </div>
+        <button type="button" name="sendPreferences" id="preferences">Click to submit and get your destination suggestions</button>
+      </form>
 
-          <div class="container assessColor">
-            <h3>What color relaxes you the most?</h3>
-            <div class="form-group">
-              <label for="color">Pick the most relaxing color</label>
-              <input id="color" class="form-control" type="color">
-            </div>
-          </div>
-
-          <div class="container assessDate">
-            <h3>What are your preferred dates?</h3>
-            <div class="form-group">
-              <label for="departure">Date you plan to depart:</label>
-              <input id="departure" class="form-control" type="date">
-            </div>
-          </div>
-
-          <div class = "container submitButton">
-            <button class="btn btn-primary btn-lg" name="sendPreferences" id="preferences">Click to submit and get your destination suggestions</button>
-          </div>
-          
-        </form>
-      </container>
-
-      <div class = "container suggestions">
-        <div class="jumbotron displaySuggestions">
-          <h3 id="displayText">You should definitely visit...</h3>
+      <div class="jumbotron displaySuggestions">
+        <h3>You should definitely visit...</h3>
+        <div>
           <ul id="suggestions">
 
           </ul>
@@ -101,12 +94,12 @@
             </div>
           </div>
 
-          <!-- Clear and try again -->
-          <p><button class="btn btn-primary btn-lg" name="clear" id="clearSuggestions">Click to clear and try again</button></p>
+          <button type="button" name="clear" id="clearSuggestions">Click to clear and try again.</button>
         </div>
       </div>
 
     </div>
-
   </body>
 </html>
+Status API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Contact Help
