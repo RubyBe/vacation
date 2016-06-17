@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>Vacation Suggestor</title>
     <!-- add css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-    <link rel="stylesheet" href="css/styles.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
+    <link href="css/styles.css" rel="stylesheet" media="screen">
 
     <!-- add script -->
-    <script src="js/jquery-3.0.0.js" type="text/javascript"></script>
-    <script src="js/scripts.js" type="text/javascript"></script>
+    <script   src="https://code.jquery.com/jquery-2.2.4.js"   integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="   crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
 
   </head>
   <body>
@@ -19,7 +20,7 @@
 
       <form class="assess">
         <h3>Temperature preferences:</h3>
-        <select class="form-control" name="temperature">
+        <select class="form-control" id="temperature">
           <option value="ignore">Not important</option>
           <option value="hot">Needs to be very hot</option>
           <option value="temperate">Needs to be temperate</option>
@@ -34,7 +35,7 @@
         <div class="radio"><label><input type="radio" name="landscape" value="urban">Need to see urban landscapes</label></div>
 
       <h3>Lodging preferences:</h3>
-      <select class="form-control" name="lodging">
+      <select class="form-control" id="lodging">
         <option value="ignore">Not important</option>
         <option value="luxury">Needs to be a luxury hotel</option>
         <option value="motel">Utilitarian is fine, but clean is necessary</option>
@@ -53,6 +54,8 @@
           <label for="departure">Date you plan to depart:</label>
           <input id="departure" class="form-control" type="date">
         </div>
+
+      <button type="button" name="sendPreferences" id="preferences">Click to submit and get your destination suggestions</button>
       </form>
 
     </div>
