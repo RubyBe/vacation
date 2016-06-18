@@ -3,6 +3,10 @@ h2 {
   color: rgba(138,151,145,1);
 }
 
+#suggestions {
+  font-size: 50px;
+}
+
 .jumbotron {
   background-color: rgba(242, 204, 12, .5);
   margin-top: 50px;
@@ -48,6 +52,10 @@ h2 {
 
 .displayDest {
   display: none;
+}
+
+#suggestions .li {
+  height: 20px;
 }
 
 /*buttons*/

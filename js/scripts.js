@@ -49,13 +49,13 @@ $(document).ready(function(){
     $("ul#suggestions").append("<li>" + suggest1 + "</li>");
     $("ul#suggestions").append("<li>" + suggest2 + "</li>");
     $("ul#suggestions").append("<li>" + suggest3 + "</li>");
-    // Display suggestions list
-    $(".displaySuggestions").show();
-    $("#clearSuggestions").show();
     // Display image gallery
     $("ul#imageGallery").append('<li><a href="' + imageLoc1 + '"><img src="' + imageLoc1 + '" width="300" alt="destination photo"></a></li>');
     $("ul#imageGallery").append('<li><a href="' + imageLoc2 + '"><img src="' + imageLoc2 + '" width="300" alt="destination photo"></a></li>');
     $("ul#imageGallery").append('<li><a href="' + imageLoc3 + '"><img src="' + imageLoc3 + '" width="300" alt="destination photo"></a></li>');
+    // Display suggestions list and button to clear and start again
+    $(".displaySuggestions").show();
+    $("#clearSuggestions").show();
   })
 
   // Clear out the suggestion list, hide the contents of the jumbotron
@@ -112,7 +112,6 @@ var determineSuggestions = function(temp, land) {
     suggest2 = "Mumbai, India";
     suggest3 = "Atlanta, Georgia";
   }
-
   // Set cold temperature preferences
   if (temp==="cold" && land==="water" || temp==="cold" && land == "ignore") {
     suggest1 = "Anchorage, Alaska";
@@ -134,7 +133,6 @@ var determineSuggestions = function(temp, land) {
     suggest2 = "Montreal";
     suggest3 = "St. Petersburg";
   }
-
   // Set temperate suggestions
   if (temp==="temperate") {
     suggest1 = "Seattle";
@@ -144,10 +142,10 @@ var determineSuggestions = function(temp, land) {
   return (suggest1, suggest2, suggest3);
 }
 
-// Function accepts location and returns href and alt text for an image representative of that location
+// Function accepts location and returns href/src for an image representative of that location
 var setImageLocs = function(suggestion){
   if (suggestion === "Seattle") {
-    imageLocation="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg";
+    imageLocation="https://upload.wikimedia.org/wikipedia/commons/2/2f/Space_Needle002.jpg";
   }
   else if (suggestion === "Everest") {
     imageLocation="https://upload.wikimedia.org/wikipedia/commons/c/c7/Mount-Everest.jpg";
@@ -167,6 +165,5 @@ var setImageLocs = function(suggestion){
   else if (suggestion === "St. Petersburg") {
     imageLocation="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/SPB_Collage_2014-3.png/800px-SPB_Collage_2014-3.png";
   }
-
   return imageLocation;
 }

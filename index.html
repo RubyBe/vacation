@@ -61,22 +61,21 @@
       </form>
 
       <!-- Display suggested destinations -->
-      <div class="jumbotron displaySuggestions">
-        <h1>Well, <span id="visitorName"></span>, you should definitely visit...</h1>
-        <div>
-          <ul id="suggestions">
+      <div class="container jumbotron displaySuggestions">
+        <h2>Well, <span id="visitorName"></span>, you should definitely visit...</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <ul id="suggestions">
 
-          </ul>
+            </ul>
+          </div>
+          <div class="col-md-4">
+          	<ul id="imageGallery">
+
+          	</ul>
+          </div>
         </div>
-
-        <!-- Try an image gallery -->
-        <div>
-        	<ul id="imageGallery">
-
-        	</ul>
-
-          <button type="button" class="btn btn-lg" name="clear" id="clearSuggestions">Click to clear and set new preferences.</button>
-        </div>
+        <button type="button" class="btn btn-lg" name="clear" id="clearSuggestions">Click to clear and set new preferences.</button>
       </div>
 
       <div class="container morePreferences">
