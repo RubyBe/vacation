@@ -87,9 +87,9 @@ var setVisitor = function(name) {
 var determineSuggestions = function(temp, land) {
   // If weather & land aren't that important, they should possibly stay near by
   if (temp==="ignore" && land==="ignore") {
-    suggest1 = "Maybe stay home?"
-    suggest2 = "Your neighbors next door?"
-    suggest3 = "A nearby hotel?"
+    suggest1 = "your own home?"
+    suggest2 = "your neighbors next door?"
+    suggest3 = "a nearby hotel?"
   }
   // Set hot temperature preferences
   if (temp==="hot" && land==="water" || temp==="hot" && land==="ignore") {
@@ -164,6 +164,9 @@ var setImageLocs = function(suggestion){
   }
   else if (suggestion === "St. Petersburg") {
     imageLocation="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/SPB_Collage_2014-3.png/800px-SPB_Collage_2014-3.png";
+  }
+  else {
+    imageLocation="https://upload.wikimedia.org/wikipedia/commons/2/2f/Space_Needle002.jpg"
   }
   return imageLocation;
 }
