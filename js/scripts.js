@@ -34,9 +34,41 @@ $(document).ready(function(){
     month = $("#departure").val();
     // event.preventDefault();
 
-    // Wrap preferences ifs/elses in separate function and call them with params temp and land, with a return of suggest1, suggest2, suggest 3
+    // Call function to take temp and land values and return 3 suggested destinations
+    determineSuggestions(temp, land);
+
+    // Set image suggestions
     // TODO
 
+    // Build display
+    // Include visitor name
+    $("#visitorName").text(visitor);
+    // Include destination suggestions
+    $("ul#suggestions").append("<li>" + suggest1 + "</li>");
+    $("ul#suggestions").append("<li>" + suggest2 + "</li>");
+    $("ul#suggestions").append("<li>" + suggest3 + "</li>");
+    // Include images
+    // TODO
+    // Display suggestions list and images
+    $(".displaySuggestions").show();
+    $("#clearSuggestions").show();
+    $("#image1").show();
+    $("#image2").show();
+    $("#image3").show();
+  })
+
+  // Clear out the suggestion list, hide the contents of the jumbotron
+  $("#clearSuggestions").click(function(event){
+    $("li").remove();
+    // $("#displayText").hide();
+    // $(this).hide();
+    $(".displaySuggestions").hide();
+  })
+
+
+
+  // Function to determine 3 suggested destinations based on temperature and landscape preferences
+  var determineSuggestions = function(temp, land) {
     // If weather & land aren't that important, they should possibly stay near by
     if (temp==="ignore" && land==="ignore") {
       suggest1 = "Maybe stay home?"
@@ -93,33 +125,9 @@ $(document).ready(function(){
       suggest2 = "Seattle";
       suggest3 = "Seattle, Washington (that's right, Seattle is the temperate climate that has it all!)"
     }
+    return (suggest1, suggest2, suggest3);
+  }
 
-    // Set image suggestions
 
-
-    // Build display
-    // Include visitor name
-    $("#visitorName").text(visitor);
-    // Include destination suggestions
-    $("ul#suggestions").append("<li>" + suggest1 + "</li>");
-    $("ul#suggestions").append("<li>" + suggest2 + "</li>");
-    $("ul#suggestions").append("<li>" + suggest3 + "</li>");
-    // Include images
-    // TODO
-    // Display suggestions list and images
-    $(".displaySuggestions").show();
-    $("#clearSuggestions").show();
-    $("#image1").show();
-    $("#image2").show();
-    $("#image3").show();
-  })
-
-  // Clear out the suggestion list, hide the contents of the jumbotron
-  $("#clearSuggestions").click(function(event){
-    $("li").remove();
-    // $("#displayText").hide();
-    // $(this).hide();
-    $(".displaySuggestions").hide();
-  })
 
 })
