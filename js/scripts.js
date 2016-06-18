@@ -20,7 +20,7 @@ $(document).ready(function(){
   $("#assess").submit(function(event){
     // Hold off on form submission events until submit button is clicked
     event.preventDefault();
-    // Store user input in our global variables
+    // Store user input in global variables
     // If user doesn't provide name, set a respectful reference
     if ($("#visitor").val()==="") {
       visitor = "my dearest visitor";
@@ -34,6 +34,9 @@ $(document).ready(function(){
     lodge = $("#lodging").val();
     color = $("#color").val();
     month = $("#departure").val();
+
+    // Call function to set visitor name based on input values
+    // TODO
 
     // Call function to take temp and land values and return 3 suggested destinations
     determineSuggestions(temp, land);
@@ -75,7 +78,7 @@ $(document).ready(function(){
       suggest3 = "A nearby hotel?"
     }
     // Set hot temperature preferences
-    if (temp==="hot" && land==="water") {
+    if (temp==="hot" && land==="water" || temp==="hot" && land==="ignore") {
       suggest1 = "San Diego"
       suggest2 = "Rio de Janiero"
       suggest3 = "Veracruz"
@@ -97,7 +100,7 @@ $(document).ready(function(){
     }
 
     // Set cold temperature preferences
-    if (temp==="cold" && land==="water") {
+    if (temp==="cold" && land==="water" || temp==="cold" && land == "ignore") {
       suggest1 = "Anchorage, Alaska";
       suggest2 = "Antartica";
       suggest3 = "Southern tip of Chile";
