@@ -22,6 +22,11 @@
       </div>
 
       <form class="assess">
+        <div class="form-group">
+          <label for="visitor"><h2>Enter your name for a personalized experience:</h2></label>
+          <input id="visitor" class="form-control" type="text">
+        </div>
+
         <div class="assessTemp">
           <h2>Temperature preferences:</h2>
           <select class="form-control" id="temperature">
@@ -56,7 +61,7 @@
       </form>
 
       <div class="jumbotron displaySuggestions">
-        <h3>You should definitely visit...</h3>
+        <h3>Well, <span id="visitorName"></span>, you should definitely visit...</h3>
         <div>
           <ul id="suggestions">
 

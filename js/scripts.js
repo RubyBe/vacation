@@ -1,12 +1,17 @@
 // Declare global variables
+// Name for our visitor
+var visitor;
+// Traits for which visitor may have preferences
 var temp;
 var land;
 var lodge;
 var color;
 var month;
+// Destination suggestions to be returned
 var suggest1;
 var suggest2;
 var suggest3;
+// Destination images to be perused by visitor
 var image1;
 var image2;
 var image3;
@@ -14,6 +19,14 @@ var image3;
 $(document).ready(function(){
   $("#preferences").click(function(event){
     // Store user input in our global variables
+    // If user doesn't provide name, set a respectful reference
+    if ($("#visitor").val()==="") {
+      visitor = "my dearest visitor";
+    }
+    else {
+      visitor = $("#visitor").val();
+    }
+    // Store preferences
     temp = $("#temperature").val();
     land = $("input:radio[name=landscape]:checked").val();
     lodge = $("#lodging").val();
@@ -21,8 +34,11 @@ $(document).ready(function(){
     month = $("#departure").val();
     // event.preventDefault();
 
-    // If things aren't that important, they should possibly stay near by
-    if (temp==="ignore" && land==="ignore" && lodge==="ignore") {
+    // Wrap preferences ifs/elses in separate function and call them with params temp and land, with a return of suggest1, suggest2, suggest 3
+    // TODO
+
+    // If weather & land aren't that important, they should possibly stay near by
+    if (temp==="ignore" && land==="ignore") {
       suggest1 = "Maybe stay home?"
       suggest2 = "Your neighbors next door?"
       suggest3 = "A nearby hotel?"
@@ -71,21 +87,25 @@ $(document).ready(function(){
       suggest3 = "Cold and Urban";
     }
 
-    // set temperate suggestions
+    // Set temperate suggestions
     if (temp==="temperate") {
       suggest1 = "Seattle";
       suggest2 = "Seattle";
-      suggest3 = "Seattle, Washington (that's right, Seattle has it all!)"
+      suggest3 = "Seattle, Washington (that's right, Seattle is the temperate climate that has it all!)"
     }
 
-    // set thumbnail images
-    // TODO
+    // Set image suggestions
+
 
     // Build display
+    // Include visitor name
+    $("#visitorName").text(visitor);
+    // Include destination suggestions
     $("ul#suggestions").append("<li>" + suggest1 + "</li>");
     $("ul#suggestions").append("<li>" + suggest2 + "</li>");
     $("ul#suggestions").append("<li>" + suggest3 + "</li>");
-
+    // Include images
+    // TODO
     // Display suggestions list and images
     $(".displaySuggestions").show();
     $("#clearSuggestions").show();
