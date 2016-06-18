@@ -33,7 +33,8 @@ $(document).ready(function(){
     determineSuggestions(temp, land);
 
     // Set image suggestions
-    // TODO
+    var imageLocation="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg"
+    var altText="moonlit Seattle night";
 
     // On submit, build display
     // Include visitor name by calling function to set visitor display name
@@ -42,12 +43,13 @@ $(document).ready(function(){
     $("ul#suggestions").append("<li>" + suggest1 + "</li>");
     $("ul#suggestions").append("<li>" + suggest2 + "</li>");
     $("ul#suggestions").append("<li>" + suggest3 + "</li>");
-    // Display suggestions list and images
+    // Display suggestions list
     $(".displaySuggestions").show();
     $("#clearSuggestions").show();
-    $("#image1").show();
-    $("#image2").show();
-    $("#image3").show();
+    // Display image gallery
+    $("ul#imageGallery").append('<li><a href="' + imageLocation + '"><img src="' + imageLocation + '" width="100" alt="' + altText + '"></a></li>');
+    $("ul#imageGallery").append('<li><a href="' + imageLocation + '"><img src="' + imageLocation + '" width="100" alt="' + altText + '"></a></li>');
+    $("ul#imageGallery").append('<li><a href="' + imageLocation + '"><img src="' + imageLocation + '" width="100" alt="' + altText + '"></a></li>');
   })
 
   // Clear out the suggestion list, hide the contents of the jumbotron

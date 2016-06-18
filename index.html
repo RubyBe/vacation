@@ -60,31 +60,23 @@
         <button type="submit" class="btn btn-lg" name="sendPreferences" id="preferences">Click to submit and get your destination suggestions</button>
       </form>
 
+
+      <!-- Display suggested destinations -->
       <div class="jumbotron displaySuggestions">
-        <h3>Well, <span id="visitorName"></span>, you should definitely visit...</h3>
+        <h1>Well, <span id="visitorName"></span>, you should definitely visit...</h1>
         <div>
           <ul id="suggestions">
 
           </ul>
+        </div>
 
-          <!-- Display thumbnails with photos of suggestion locations -->
-          <div class="row">
-            <div class="col-xs-4 col-md-3">
-              <a href="#" class="thumbnail">
-                <img src = "http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg" alt="moonlit seattle night" >
-              </a>
-            </div>
-            <div class="col-xs-4 col-md-3">
-              <a href="#" class="thumbnail">
-                <img src="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg" alt="moonlit seattle night">
-              </a>
-            </div>
-            <div class="col-xs-4 col-md-3">
-              <a href="#" class="thumbnail">
-                <img src="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg" alt="moonlit seattle night">
-              </a>
-            </div>
-          </div>
+        <!-- Try an image gallery -->
+        <div>
+        	<ul id="imageGallery">
+        		<!-- <li><a href="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg"><img src="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg" width="100" alt="moonlit Seattle night"></a></li>
+        		<li><a href="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg"><img src="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg" width="100" alt="Smoonlit Seattle night"></a></li>
+        		<li><a href="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg"><img src="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg" width="100" alt="moonlit Seattle night"></a></li> -->
+        	</ul>
 
           <button type="button" class="btn btn-lg" name="clear" id="clearSuggestions">Click to clear and set new preferences.</button>
         </div>
