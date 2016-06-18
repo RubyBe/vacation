@@ -11,14 +11,13 @@ var month;
 var suggest1;
 var suggest2;
 var suggest3;
-// Destination images to be perused by visitor
-var image1;
-var image2;
-var image3;
+// Variables to hold tags to build the image reference
+var imageLocation;
+var altText;
 
 $(document).ready(function(){
   $("#assess").submit(function(event){
-    // Hold off on form submission events until submit button is clicked
+    // Hold off on post-form-submission events until submit button is clicked
     event.preventDefault();
 
     // Store user input in global variables
@@ -32,9 +31,10 @@ $(document).ready(function(){
     // Call function to take temp and land values and return 3 suggested destinations
     determineSuggestions(temp, land);
 
-    // Set image suggestions
-    var imageLocation="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg"
-    var altText="moonlit Seattle night";
+    // Call function to set destination images
+    var imageLoc1 = setImageLocs(suggest1);
+    var imageLoc2 = setImageLocs(suggest2);
+    var imageLoc3 = setImageLocs(suggest3);
 
     // On submit, build display
     // Include visitor name by calling function to set visitor display name
@@ -47,9 +47,9 @@ $(document).ready(function(){
     $(".displaySuggestions").show();
     $("#clearSuggestions").show();
     // Display image gallery
-    $("ul#imageGallery").append('<li><a href="' + imageLocation + '"><img src="' + imageLocation + '" width="100" alt="' + altText + '"></a></li>');
-    $("ul#imageGallery").append('<li><a href="' + imageLocation + '"><img src="' + imageLocation + '" width="100" alt="' + altText + '"></a></li>');
-    $("ul#imageGallery").append('<li><a href="' + imageLocation + '"><img src="' + imageLocation + '" width="100" alt="' + altText + '"></a></li>');
+    $("ul#imageGallery").append('<li><a href="' + imageLoc1 + '"><img src="' + imageLoc1 + '" width="300" alt="destination photo"></a></li>');
+    $("ul#imageGallery").append('<li><a href="' + imageLoc2 + '"><img src="' + imageLoc2 + '" width="300" alt="destination photo"></a></li>');
+    $("ul#imageGallery").append('<li><a href="' + imageLoc3 + '"><img src="' + imageLoc3 + '" width="300" alt="destination photo"></a></li>');
   })
 
   // Clear out the suggestion list, hide the contents of the jumbotron
@@ -132,5 +132,19 @@ $(document).ready(function(){
     }
     return (suggest1, suggest2, suggest3);
   }
+
+  // Function accepts location and returns href and alt text for an image representative of that location
+  var setImageLocs = function(suggestion){
+    if (suggest1 || suggest2 || suggest3 === "Seattle") {
+      imageLocation="http://thumb1.shutterstock.com/photos/thumb_large/809158/149142998.jpg";
+      // TODO
+      // altText="moonlit Seattle night";
+    }
+    return imageLocation;
+  }
+
+  // Function accepts 3 destinations and assigns images to each destinations
+  // TODO
+
 
 })
