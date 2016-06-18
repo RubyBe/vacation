@@ -17,7 +17,9 @@ var image2;
 var image3;
 
 $(document).ready(function(){
-  $("#preferences").click(function(event){
+  $("#assess").submit(function(event){
+    // Hold off on form submission events until submit button is clicked
+    event.preventDefault();
     // Store user input in our global variables
     // If user doesn't provide name, set a respectful reference
     if ($("#visitor").val()==="") {
@@ -32,7 +34,6 @@ $(document).ready(function(){
     lodge = $("#lodging").val();
     color = $("#color").val();
     month = $("#departure").val();
-    // event.preventDefault();
 
     // Call function to take temp and land values and return 3 suggested destinations
     determineSuggestions(temp, land);
@@ -40,15 +41,13 @@ $(document).ready(function(){
     // Set image suggestions
     // TODO
 
-    // Build display
+    // On submit, build display
     // Include visitor name
     $("#visitorName").text(visitor);
     // Include destination suggestions
     $("ul#suggestions").append("<li>" + suggest1 + "</li>");
     $("ul#suggestions").append("<li>" + suggest2 + "</li>");
     $("ul#suggestions").append("<li>" + suggest3 + "</li>");
-    // Include images
-    // TODO
     // Display suggestions list and images
     $(".displaySuggestions").show();
     $("#clearSuggestions").show();
