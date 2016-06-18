@@ -20,23 +20,14 @@ $(document).ready(function(){
   $("#assess").submit(function(event){
     // Hold off on form submission events until submit button is clicked
     event.preventDefault();
+
     // Store user input in global variables
-    // If user doesn't provide name, set a respectful reference
-    if ($("#visitor").val()==="") {
-      visitor = "my dearest visitor";
-    }
-    else {
-      visitor = $("#visitor").val();
-    }
-    // Store preferences
+    visitor = $("#visitor").val();
     temp = $("#temperature").val();
     land = $("input:radio[name=landscape]:checked").val();
     lodge = $("#lodging").val();
     color = $("#color").val();
     month = $("#departure").val();
-
-    // Call function to set visitor name based on input values
-    // TODO
 
     // Call function to take temp and land values and return 3 suggested destinations
     determineSuggestions(temp, land);
@@ -45,8 +36,8 @@ $(document).ready(function(){
     // TODO
 
     // On submit, build display
-    // Include visitor name
-    $("#visitorName").text(visitor);
+    // Include visitor name by calling function to set visitor display name
+    $("#visitorName").text(setVisitor(visitor));
     // Include destination suggestions
     $("ul#suggestions").append("<li>" + suggest1 + "</li>");
     $("ul#suggestions").append("<li>" + suggest2 + "</li>");
@@ -67,7 +58,17 @@ $(document).ready(function(){
     $(".displaySuggestions").hide();
   })
 
-
+  // Function to set visitor reference
+  // If user doesn't provide name, set a respectful reference
+  var setVisitor = function(name) {
+    if (name === "") {
+      newName = "my dearest visitor";
+    }
+    else {
+      newName = $("#visitor").val();
+    }
+    return newName;
+  }
 
   // Function to determine 3 suggested destinations based on temperature and landscape preferences
   var determineSuggestions = function(temp, land) {
@@ -129,7 +130,5 @@ $(document).ready(function(){
     }
     return (suggest1, suggest2, suggest3);
   }
-
-
 
 })
