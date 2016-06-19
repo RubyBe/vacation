@@ -8,7 +8,7 @@ h2 {
 }
 
 .jumbotron {
-  background-color: rgba(242, 204, 12, .5);
+  /*background-color: rgba(242, 204, 12, .5);*/
   margin-top: 50px;
 }
 
@@ -22,12 +22,14 @@ h2 {
   margin-top: 50px;
   height: 200px;
   background-image: url(http://tse2.mm.bing.net/th?id=OIP.M873aec80407a3bcc23373d36a82e67fao0&pid=15.1);
+  background-size: 50%;
 }
 
 .assessLodge {
   margin-top: 50px;
   height: 200px;
-  background-image: url(http://icons.iconarchive.com/icons/dapino/summer-holiday/256/hotel-icon.png)
+  background-image: url(http://icons.iconarchive.com/icons/dapino/summer-holiday/256/hotel-icon.png);
+background-size: 30%;
 }
 
 .assessColor {
@@ -54,8 +56,9 @@ h2 {
   display: none;
 }
 
-#suggestions .li {
-  height: 20px;
+#suggestions li {
+  height: 40px;
+  font-size: 20px;
 }
 
 /*buttons*/
