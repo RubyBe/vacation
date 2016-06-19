@@ -50,10 +50,12 @@ $(document).ready(function(){
     $("ul#suggestions").append("<li>" + suggest2 + "</li>");
     $("ul#suggestions").append("<li>" + suggest3 + "</li>");
     // Display image gallery
+    // TODO
+    // Refactor this section using attr()
     $("ul#imageGallery").append('<li><a href="' + imageLoc1 + '"><img src="' + imageLoc1 + '" width="300" alt="destination photo"></a></li>');
     $("ul#imageGallery").append('<li><a href="' + imageLoc2 + '"><img src="' + imageLoc2 + '" width="300" alt="destination photo"></a></li>');
     $("ul#imageGallery").append('<li><a href="' + imageLoc3 + '"><img src="' + imageLoc3 + '" width="300" alt="destination photo"></a></li>');
-    // Display suggestions list and button to clear and start again
+    // Display the suggestions list and the button to allow visitor to clear and start again
     $(".displaySuggestions").show();
     $("#clearSuggestions").show();
   })
@@ -66,7 +68,6 @@ $(document).ready(function(){
     $(".displaySuggestions").hide();
   })
 })
-
 
 // *************************************************
 // BUSINESS LOGIC
