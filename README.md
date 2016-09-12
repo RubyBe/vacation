@@ -37,7 +37,10 @@ We use [git](https://git-scm.com) for versioning.
 
 ## License
 
-This project is not licensed
+Copyright (c) 2016 by Sid Benavente
+
+This software is licensed under the MIT license.
+
 
 ## Acknowledgments
 
